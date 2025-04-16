@@ -32,15 +32,15 @@ export default function Contact() {
   };
 
   return (
-    <div className="contact-page-wrapper">
+    <div className='contact-page-wrapper'>
       {/* Navigation Header */}
-      <header className="main-header">
-        <Link to="/" className="restaurant-name">
+      <header className='main-header'>
+        <Link to='/' className='restaurant-name'>
           Nero
         </Link>
 
         {/* Hamburger menu for mobile */}
-        <div className="hamburger" onClick={toggleMenu}>
+        <div className='hamburger' onClick={toggleMenu}>
           <div className={`bar ${isMenuOpen ? 'open' : ''}`}></div>
           <div className={`bar ${isMenuOpen ? 'open' : ''}`}></div>
           <div className={`bar ${isMenuOpen ? 'open' : ''}`}></div>
@@ -49,16 +49,16 @@ export default function Contact() {
         <nav className={`main-nav ${isMenuOpen ? 'show' : ''}`}>
           <ul>
             <li>
-              <NavLink to="/">HOME</NavLink>
+              <NavLink to='/'>HOME</NavLink>
             </li>
             <li>
-              <NavLink to="/booking">BOOKING</NavLink>
+              <NavLink to='/booking'>BOOKING</NavLink>
             </li>
             <li>
-              <NavLink to="/contact">CONTACT</NavLink>
+              <NavLink to='/contact'>CONTACT</NavLink>
             </li>
             <li>
-              <NavLink to="/admin" className="admin-link">
+              <NavLink to='/admin' className='admin-link'>
                 ADMIN
               </NavLink>
             </li>
@@ -66,59 +66,59 @@ export default function Contact() {
         </nav>
       </header>
 
-      <div className="contact-content">
-        <div className="contact-form-container">
+      <div className='contact-content'>
+        <div className='contact-form-container'>
           <h2>Contact Us</h2>
           <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="name">Name</label>
+            <div className='form-group'>
+              <label htmlFor='name'>Name</label>
               <input
-                type="text"
-                id="name"
-                name="name"
+                type='text'
+                id='name'
+                name='name'
                 value={formData.name}
                 onChange={handleChange}
                 required
               />
             </div>
 
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
+            <div className='form-group'>
+              <label htmlFor='email'>Email</label>
               <input
-                type="email"
-                id="email"
-                name="email"
+                type='email'
+                id='email'
+                name='email'
                 value={formData.email}
                 onChange={handleChange}
                 required
               />
             </div>
 
-            <div className="form-group">
-              <label htmlFor="message">Message</label>
+            <div className='form-group'>
+              <label htmlFor='message'>Message</label>
               <textarea
-                id="message"
-                name="message"
+                id='message'
+                name='message'
                 value={formData.message}
                 onChange={handleChange}
                 required></textarea>
             </div>
 
-            <button type="submit" className="submit-btn">
+            <button type='submit' className='submit-btn'>
               Send
             </button>
           </form>
         </div>
 
-        <div className="opening-hours-container">
+        <div className='opening-hours-container'>
           <h2>Opening hours</h2>
-          <div className="hours-grid">
-            <div className="days-column">
+          <div className='hours-grid'>
+            <div className='days-column'>
               <p>Monday - Thursday</p>
               <p>Friday - Saturday</p>
               <p>Sunday</p>
             </div>
-            <div className="times-column">
+            <div className='times-column'>
               <p>10:00 - 23:00</p>
               <p>12:00 - 23:30</p>
               <p>Closed</p>
@@ -128,10 +128,10 @@ export default function Contact() {
       </div>
 
       {/* Footer Section */}
-      <footer className="main-footer">
-        <div className="footer-content">
-          <p className="copyright">
-            © 2025 Ristorante Nero – Äkta italiensk smaktradition
+      <footer className='main-footer'>
+        <div className='footer-content'>
+          <p className='copyright'>
+            © 2025 Ristorante Nero – True taste of Italian tradition
           </p>
         </div>
       </footer>

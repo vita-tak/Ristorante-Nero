@@ -457,7 +457,7 @@ function Booking() {
       <footer className='main-footer'>
         <div className='footer-content'>
           <p className='copyright'>
-            © 2025 Ristorante Nero – Äkta italiensk smaktradition
+            © 2025 Ristorante Nero – True taste of Italian tradition
           </p>
         </div>
       </footer>
