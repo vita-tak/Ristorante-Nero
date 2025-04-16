@@ -1,0 +1,12 @@
+.footer {
+    section {
+        align-items: center;
+        width: 100%;
+    }
+
+    section small {
+        font-family: "Roboto", serif;
+        font-size: 0.9rem;
+        color: #FAF7F0;
+    }
+}

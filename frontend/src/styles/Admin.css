@@ -1,0 +1,746 @@
+.admin-container {
+    --dark-bg: #1a1a1a;
+    --dark-card-bg: #242424;
+    --dark-sidebar: #0f0f0f;
+    --dark-text: #e0e0e0;
+    --dark-text-secondary: #a0a0a0;
+    --dark-border: #333333;
+    --dark-hover: #2c2c2c;
+    --dark-primary: #3a86ff;
+    --dark-danger: #e63946;
+    --dark-success: #2a9d8f;
+    --dark-warning: #e9c46a;
+    --tab-active-border: #3a86ff;
+
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sidebar {
+        width: 300px;
+        background-color: var(--dark-sidebar);
+        border-right: 1px solid var(--dark-border);
+        padding: 1rem 0;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        transition: transform 0.3s ease;
+    }
+
+    .sidebar-header {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0 1rem 1rem;
+        border-bottom: 1px solid var(--dark-border);
+        margin-bottom: 1rem;
+    }
+
+    .sidebar-header h2 {
+        font-size: 1rem;
+        margin: 0;
+        font-weight: 500;
+    }
+
+    .restaurants-section {
+        padding: 0 1rem;
+    }
+
+    .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.75rem;
+    }
+
+    .section-header h3 {
+        font-size: 0.875rem;
+        margin: 0;
+        color: var(--dark-text-secondary);
+        font-weight: 500;
+    }
+
+    .add-button {
+        width: 24px;
+        height: 24px;
+        border: none;
+        background-color: var(--dark-primary);
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 100;
+        border-radius: 50%;
+        font-family: 'Inter', sans-serif;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .create-restaurant-form {
+        margin-bottom: 1rem;
+        padding: 0.75rem;
+        border-radius: 8px;
+        background-color: var(--dark-card-bg);
+        border: 1px solid var(--dark-border);
+        box-sizing: border-box;
+    }
+
+    .create-restaurant-form input {
+        width: 100%;
+        padding: 0.5rem 0.75rem;
+        border-radius: 4px;
+        border: 1px solid var(--dark-border);
+        background-color: var(--dark-bg);
+        color: var(--dark-text);
+        margin-bottom: 0.5rem;
+        box-sizing: border-box;
+        font-size: 0.875rem;
+    }
+
+    .create-restaurant-btn {
+        width: 100%;
+        padding: 0.5rem 0;
+        border-radius: 4px;
+        border: none;
+        background-color: var(--dark-primary);
+        color: white;
+        font-weight: 500;
+        cursor: pointer;
+        font-size: 0.875rem;
+    }
+
+    .restaurants-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .restaurant-item {
+        padding: 0.75rem 1rem;
+        cursor: pointer;
+        border-radius: 4px;
+        margin: 0 0 0.25rem;
+        transition: background-color 0.2s;
+    }
+
+    .restaurant-item:hover {
+        background-color: var(--dark-hover);
+    }
+
+    .restaurant-item.active {
+        background-color: rgba(58, 134, 255, 0.2);
+        color: var(--dark-primary);
+    }
+
+    .restaurant-rating {
+        font-size: 0.75rem;
+        color: var(--dark-text-secondary);
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        margin-top: 0.25rem;
+    }
+
+    .burger-menu {
+        display: none;
+        position: fixed;
+        top: 1.5rem;
+        left: 1.3rem;
+        z-index: 100;
+        background-color: var(--dark-primary);
+        border-radius: 4px;
+        padding: 0.5rem;
+        cursor: pointer;
+        color: white;
+    }
+
+    .burger-menu svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .main-content {
+        flex: 1;
+        padding: 1.25rem;
+    }
+
+    .dashboard-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: 1rem;
+        margin-bottom: 1.5rem;
+        height: 200px;
+    }
+
+    .date-selector label {
+        color: var(--dark-text-secondary);
+        font-size: 0.875rem;
+    }
+
+    .date-input {
+        padding: 0.375rem 0.75rem;
+        border-radius: 4px;
+        border: 1px solid var(--dark-border);
+        background-color: var(--dark-bg);
+        color: var(--dark-text);
+        font-size: 0.875rem;
+    }
+
+    .date-input:focus {
+        outline: none;
+        border-color: var(--dark-primary);
+    }
+
+    .date-display {
+        font-weight: 500;
+        color: var(--dark-primary);
+        margin-left: 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    .dashboard-title {
+        margin: 0;
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+
+    .dashboard-subtitle {
+        color: var(--dark-text-secondary);
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+    }
+
+    .header-actions {
+        display: flex;
+        gap: 0.75rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        border: none;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    .btn-primary {
+        background-color: var(--dark-primary);
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background-color: #2a75e8;
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .stat-card {
+        background-color: var(--dark-card-bg);
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        position: relative;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 0.5rem 0;
+    }
+
+    .stat-label {
+        color: var(--dark-text-secondary);
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .stat-context {
+        font-size: 0.75rem;
+        color: var(--dark-text-secondary);
+    }
+
+    .stat-icon {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        color: var(--dark-text-secondary);
+    }
+
+    .tab-container {
+        margin-bottom: 1rem;
+    }
+
+    .tab-header {
+        display: flex;
+        border-bottom: 1px solid var(--dark-border);
+        margin-bottom: 1rem;
+    }
+
+    .tab {
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        position: relative;
+        color: var(--dark-text-secondary);
+        font-size: 0.875rem;
+    }
+
+    .tab.active {
+        color: var(--dark-text);
+    }
+
+    .tab.active::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: var(--tab-active-border);
+    }
+
+    .booking-section-header {
+        margin-bottom: 1.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .booking-section-header h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .booking-section-header p {
+        font-size: 0.875rem;
+        color: var(--dark-text-secondary);
+    }
+
+    .booking-form {
+        background-color: var(--dark-card-bg);
+        border-radius: 8px;
+        padding: 1.25rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .booking-form h3 {
+        font-size: 1.125rem;
+        margin-bottom: 1rem;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        position: relative;
+    }
+
+    .form-label {
+        font-size: 0.875rem;
+        color: var(--dark-text-secondary);
+    }
+
+    .form-control {
+        padding: 0.5rem 0.75rem;
+        border-radius: 4px;
+        border: 1px solid var(--dark-border);
+        background-color: var(--dark-bg);
+        color: var(--dark-text);
+        font-size: 0.875rem;
+    }
+
+    .form-control:focus {
+        outline: none;
+        border-color: var(--dark-primary);
+    }
+
+    .form-actions {
+        display: flex;
+        gap: 0.75rem;
+        margin-top: 1rem;
+    }
+
+    .bookings-table {
+        background-color: var(--dark-card-bg);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .table th {
+        text-align: left;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid var(--dark-border);
+        color: var(--dark-text-secondary);
+        font-weight: 500;
+        font-size: 0.875rem;
+    }
+
+    .table td {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid var(--dark-border);
+        font-size: 0.875rem;
+    }
+
+    .table tr:last-child td {
+        border-bottom: none;
+    }
+
+    .table tr:hover {
+        background-color: var(--dark-hover);
+    }
+
+    .action-btn {
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        font-size: 0.75rem;
+    }
+
+    .action-dropdown {
+        padding: 0.25rem 0.5rem;
+        background-color: transparent;
+        border: 1px solid var(--dark-border);
+        border-radius: 4px;
+        color: var(--dark-text);
+        cursor: pointer;
+        font-size: 0.875rem;
+    }
+
+    .search-container {
+        position: relative;
+        margin-top: 0.5rem;
+    }
+
+    .search-input {
+        padding: 0.5rem 0.75rem;
+        padding-right: 2rem;
+        border-radius: 4px;
+        border: 1px solid var(--dark-border);
+        background-color: var(--dark-bg);
+        color: var(--dark-text);
+        width: 250px;
+        font-size: 0.875rem;
+    }
+
+    .search-input:focus {
+        outline: none;
+        border-color: var(--dark-primary);
+    }
+
+    .clear-search {
+        position: absolute;
+        right: 0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: var(--dark-text-secondary);
+        font-size: 1.25rem;
+        cursor: pointer;
+        padding: 0.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .clear-search:hover {
+        color: var(--dark-text);
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        border-top: 1px solid var(--dark-border);
+    }
+
+    .pagination-button {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        border: 1px solid var(--dark-border);
+        background-color: var(--dark-card-bg);
+        color: var(--dark-text);
+        cursor: pointer;
+        font-size: 0.875rem;
+        transition: all 0.2s;
+    }
+
+    .pagination-button:hover:not(:disabled) {
+        background-color: var(--dark-hover);
+    }
+
+    .pagination-button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    .pagination-info {
+        font-size: 0.875rem;
+        color: var(--dark-text-secondary);
+    }
+
+    .restaurant-info-tab {
+        padding: 0 0 2.5rem;
+    }
+
+    .info-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .info-header h2 {
+        font-size: 1.25rem;
+        margin: 0 0 0.5rem;
+        font-weight: 500;
+    }
+
+    .info-subtitle {
+        color: var(--dark-text-secondary);
+        margin: 0;
+        font-size: 0.875rem;
+    }
+
+    .info-cards-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .info-card {
+        background-color: var(--dark-card-bg);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .info-card-header {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem;
+        border-bottom: 1px solid var(--dark-border);
+    }
+
+    .info-card-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: rgba(58, 134, 255, 0.1);
+        color: var(--dark-primary);
+    }
+
+    .info-card-header h3 {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .info-card-content {
+        padding: 1rem;
+    }
+
+    .info-date-selector {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .info-date-input {
+        padding: 0.375rem 0.75rem;
+        border-radius: 4px;
+        border: 1px solid var(--dark-border);
+        background-color: var(--dark-bg);
+        color: var(--dark-text);
+        font-size: 0.875rem;
+    }
+
+    .info-selected-date {
+        font-weight: 500;
+        color: var(--dark-primary);
+        font-size: 0.875rem;
+    }
+
+    .info-data-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.75rem;
+        font-size: 0.875rem;
+    }
+
+    .info-data-row:last-child {
+        margin-bottom: 0;
+    }
+
+    .info-label {
+        color: var(--dark-text-secondary);
+    }
+
+    .info-value {
+        font-weight: 500;
+    }
+
+    .info-availability {
+        display: flex;
+        align-items: center;
+        gap: 0.375rem;
+    }
+
+    .info-availability::before {
+        content: '';
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: var(--dark-success);
+    }
+
+    .additional-info-section {
+        background-color: var(--dark-card-bg);
+        border-radius: 8px;
+        padding: 1rem;
+    }
+
+    .additional-info-section h3 {
+        margin: 0 0 1rem;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .info-text {
+        font-size: 0.875rem;
+        line-height: 1.6;
+        margin: 0 0 1rem;
+        color: var(--dark-text-secondary);
+    }
+
+    .info-text:last-child {
+        margin-bottom: 0;
+    }
+
+    .error-message {
+        color: var(--dark-danger);
+        margin-top: 0.75rem;
+        font-size: 0.875rem;
+    }
+
+    /* Form validation styles */
+    .error-message {
+        color: #dc3545;
+        font-size: 0.85rem;
+        margin-top: 0.25rem;
+    }
+
+    .is-invalid {
+        border-color: #dc3545 !important;
+    }
+
+    .form-group {
+        position: relative;
+    }
+
+    @media (max-width: 1200px) {
+        .stats-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .form-row {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .info-cards-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .burger-menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dashboard-header {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            gap: 1rem;
+            padding-bottom: 0;
+        }
+
+        .sidebar {
+            position: fixed;
+            z-index: 999;
+            transform: translateX(-100%);
+        }
+
+        .sidebar.open {
+            transform: translateX(0);
+        }
+
+        .main-content {
+            width: 100%;
+        }
+
+        .stats-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .form-row {
+            grid-template-columns: 1fr;
+        }
+
+        .date-selector {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .booking-section-header {
+            align-items: flex-start;
+        }
+
+        .info-date-selector {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+}

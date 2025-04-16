@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Italianno&display=swap');
+
+.contact-page-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('../assets/img/italian-cuisine.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #faf7f0;
+  overflow-x: hidden;
+}
+
+.contact-page-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Header styles */
+.contact-page-wrapper .main-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.contact-page-wrapper .restaurant-name {
+  font-family: 'Italianno', cursive;
+  color: #faf7f0;
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.contact-page-wrapper .main-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact-page-wrapper .main-nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-page-wrapper .main-nav li {
+  margin: 0;
+}
+
+.contact-page-wrapper .main-nav a {
+  font-family: 'Italiana', serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #faf7f0;
+  transition: color 0.3s ease;
+}
+
+.contact-page-wrapper .main-nav a:hover,
+.contact-page-wrapper .admin-link:hover {
+  color: #6ba539;
+}
+
+.contact-page-wrapper .main-nav a.active {
+  color: #faf7f0;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+/* Content styles */
+.contact-content {
+  flex: 1;
+  display: flex;
+  padding: 8rem 2rem 2rem;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+/* Form Container */
+.contact-form-container {
+  width: 100%;
+  max-width: 500px;
+  background-color: rgba(60, 47, 47, 0.9);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
+}
+
+.contact-form-container h2 {
+  font-family: 'Italianno', serif;
+  font-size: 3rem;
+  color: #faf7f0;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #faf7f0;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #faf7f0;
+  border: none;
+  border-radius: 5px;
+  color: #3c2f2f;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: #6ba539;
+  color: #faf7f0;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.submit-btn:hover {
+  background-color: #86ba57;
+}
+
+/* Opening Hours */
+.opening-hours-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+  color: #faf7f0;
+}
+
+.opening-hours-container h2 {
+  font-family: 'Italianno', serif;
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #faf7f0;
+}
+
+.hours-grid {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.days-column,
+.times-column {
+  text-align: center;
+}
+
+.days-column p,
+.times-column p {
+  font-family: 'Italiana', serif;
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Footer styles */
+.contact-page-wrapper .main-footer {
+  background-color: rgba(60, 47, 47, 0.1);
+  backdrop-filter: blur(4px);
+  color: #faf7f0;
+  padding: 1rem 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.contact-page-wrapper .footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-page-wrapper .copyright {
+  font-family: 'Italiana', serif;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: #faf7f0;
+}
+
+/* Hamburger Menu */
+.contact-page-wrapper .hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 110;
+}
+
+.contact-page-wrapper .hamburger .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #faf7f0;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.contact-page-wrapper .hamburger .bar:nth-child(1).open {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.contact-page-wrapper .hamburger .bar:nth-child(2).open {
+  opacity: 0;
+}
+
+.contact-page-wrapper .hamburger .bar:nth-child(3).open {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+    padding-top: 6rem;
+  }
+
+  .contact-form-container,
+  .opening-hours-container {
+    max-width: 100%;
+  }
+
+  .contact-page-wrapper .hamburger {
+    display: flex;
+  }
+
+  .contact-page-wrapper .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: rgba(60, 47, 47, 0.95);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease;
+    z-index: 100;
+  }
+
+  .contact-page-wrapper .main-nav.show {
+    right: 0;
+  }
+
+  .contact-page-wrapper .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .contact-page-wrapper .main-nav a {
+    font-size: 1.8rem;
+  }
+
+  .hours-grid {
+    gap: 1.5rem;
+  }
+
+  .days-column p,
+  .times-column p {
+    font-size: 1.5rem;
+  }
+
+  /* Updated footer styles for mobile */
+  .contact-page-wrapper .footer-content {
+    width: 95%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .contact-content {
+    padding: 8rem 1rem 2rem;
+  }
+}
