@@ -2,6 +2,12 @@
 
 En restaurangsida med React frontend och blockchain backend. Detta projekt använder Hardhat för smart contract-hantering och Vite som React utvecklingsmiljö.
 
+<img width="1268" alt="Nero-Home" src="https://github.com/user-attachments/assets/87881583-c217-4c19-845b-7e538278c926" />
+<img width="1268" alt="Nero-Home2" src="https://github.com/user-attachments/assets/3b9f8795-278b-4a81-b412-60872a637a33" />
+<img width="1280" alt="Nero-Booking" src="https://github.com/user-attachments/assets/500ee151-9ff1-4ebf-94b5-9d5a3093173d" />
+<img width="1268" alt="Nero-Contact" src="https://github.com/user-attachments/assets/575256ee-c1f2-4280-bf66-3e1a55791424" />
+<img width="1280" alt="Nero-Admin" src="https://github.com/user-attachments/assets/40e17b59-dfa4-42f3-9170-5da8fe513e04" />
+
 ## 🍽️ Projektöversikt
 
 Detta system gör det möjligt för restaurangbesökare att:
