@@ -12,7 +12,16 @@ This application lets guests reserve tables via MetaMask‑verified transactions
 - Select date, party size and seating time  
 - Real‑time availability checks  
 - Admin dashboard: create, view, edit & delete bookings
-- Modern, responsive UI built with React  
+- Modern, responsive UI built with React
+
+## Smart Contract Features
+
+- On-chain storage of restaurants and bookings
+- Booking management: creation, editing, and deletion
+- Relationship tracking between restaurants and their bookings
+- Event emission for real-time frontend updates
+- Gas-efficient array manipulation when removing bookings
+- View function to retrieve all bookings for a specific restaurant
 
 ## Tech Stack
 
